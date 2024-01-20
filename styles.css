@@ -1,0 +1,111 @@
+
+        *, *::after, *::before { /*los asteriscos son para seleccionar todos los elementos del html, los ::after y ::before son para seleccionar los elementos que estan despues y antes de los elementos del html*/
+         box-sizing: border-box; /*box-sizing es para que el tamaño de los elementos no se modifique al agregarle un borde*/
+         font-family: Gotham Rounded, sans-serif; /*font-family es para seleccionar la fuente de los elementos*/
+        }
+        
+        html {
+          background: #018DED;
+          background-size: cover;
+          font-family: 'helvetica neue';
+          text-align: center;
+          font-size: 10px;
+        }
+    
+        .Titulo {
+            font-size: 3rem;
+            color: white;
+        }
+
+        body {
+          margin: 0;
+          font-size: 2rem;
+          display: flex;
+          flex: 1;
+          min-height: 100vh;
+          align-items: center;
+        }
+    
+        .clock {
+          width: 30rem;
+          height: 30rem;
+          border: 20px solid salmon;
+          border-radius: 50%;
+          margin: 50px auto;
+          position: relative;
+          padding: 2rem;
+          box-shadow:
+            0 0 0 4px red,
+            inset 0 0 0 3px red,
+            inset 0 0 10px green,
+            0 0 10px green;
+        }
+    
+        .clock-face {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          transform: translateY(-3px); /* account for the height of the clock hands */
+        }
+    
+        .hand {
+          width: 50%;
+          height: 6px;
+          background: black;
+          position: absolute;
+          top: 50%;
+          transform-origin: 100%;
+          transform: rotate(90deg);
+          transition: all 0.05s;
+          transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+        }
+
+        .clock .number {
+            --rotation:0; /*aqui creamos una variable que se llamara --rotation y que sera igual a 0*/
+            position: absolute; /*aqui le decimos que la posicion de los numeros sea absoluta*/
+            width: 100%; /*aqui le decimos que el ancho de los numeros sea del 100%*/
+            height: 100%; /*aqui le decimos que la altura de los numeros sea del 100%*/
+            text-align: center; /*aqui le decimos que el texto de los numeros sea centrado*/
+            transform: rotate(var(--rotation)); /*aqui le decimos que los numeros se roten en el angulo de la variable --rotation*/
+            font-size:  1.5rem;
+            color: white;
+        }
+
+        .clock .number1 {
+            --rotation:30deg; /*aqui le decimos que la variable --rotation sea igual a 30 grados*/
+        }
+        .clock .number2 {
+            --rotation:60deg; /*aqui le decimos que la variable --rotation sea igual a 60 grados*/
+        }
+        .clock .number3 {
+            --rotation:90deg; /*aqui le decimos que la variable --rotation sea igual a 90 grados*/
+        }
+        .clock .number4 {
+            --rotation:120deg; /*aqui le decimos que la variable --rotation sea igual a 120 grados*/
+        }
+        .clock .number5 {
+            --rotation:150deg; /*aqui le decimos que la variable --rotation sea igual a 150 grados*/
+        }
+        .clock .number6 {
+            --rotation:180deg; /*aqui le decimos que la variable --rotation sea igual a 180 grados*/
+        }
+        .clock .number7 {
+            --rotation:210deg; /*aqui le decimos que la variable --rotation sea igual a 210 grados*/
+        }
+        .clock .number8 {
+            --rotation:240deg; /*aqui le decimos que la variable --rotation sea igual a 240 grados*/
+        }
+        .clock .number9 {
+            --rotation:270deg; /*aqui le decimos que la variable --rotation sea igual a 270 grados*/
+        }
+        .clock .number10 {
+            --rotation:300deg; /*aqui le decimos que la variable --rotation sea igual a 300 grados*/
+        }
+        .clock .number11 {
+            --rotation:330deg; /*aqui le decimos que la variable --rotation sea igual a 330 grados*/
+        }
+        .clock .number12 {
+            --rotation:360deg; /*aqui le decimos que la variable --rotation sea igual a 360 grados*/
+        }
+
+    
